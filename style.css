@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif; /* Fonte tecnológica */
+  font-family: 'Exo 2', sans-serif;
   background: #f4f4f4;
   color: #333;
 }
@@ -10,19 +10,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2c2c2c; /* cinza tecnológico */
+  background: #2c2c2c;
   padding: 15px 30px;
   color: #fff;
 }
 
 .logo h1 {
   margin: 0;
-  font-size: 24px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  color: #fff;
 }
 .logo p {
   margin: 0;
-  font-size: 12px;
-  color: #ccc;
+  font-size: 14px;
+  color: #ffa500;
 }
 
 .menu {
@@ -36,10 +38,10 @@ header {
   transition: color 0.3s;
 }
 .menu li a:hover {
-  color: #ffa500; /* laranja hover */
+  color: #ffa500;
 }
 .menu li a.active {
-  color: #ff6600; /* laranja forte ativo */
+  color: #ff6600;
 }
 
 /* Hambúrguer */
@@ -54,6 +56,7 @@ header {
 .carousel {
   position: relative;
   overflow: hidden;
+  height: 60vh;
 }
 .slides {
   display: flex;
@@ -65,14 +68,16 @@ header {
 }
 .slide img {
   width: 100%;
-  opacity: 0.9; /* leve esmaecimento */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
 }
 .slide::after {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.3); /* overlay escuro translúcido */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2));
 }
 .slide .texto {
   position: absolute;
@@ -80,7 +85,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   text-shadow: 2px 2px 4px #000;
   z-index: 1;
 }
@@ -88,15 +93,16 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.2);
   color: #fff;
   border: none;
-  padding: 10px;
+  border-radius: 50%;
+  padding: 15px;
   cursor: pointer;
   z-index: 2;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 20px; }
+.next { right: 20px; }
 
 /* Serviços */
 .servicos {
@@ -107,9 +113,14 @@ header {
 }
 .card {
   width: 30%;
-  background: #eee;
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* Foco */
@@ -133,25 +144,47 @@ header {
 .contadores {
   display: flex;
   justify-content: space-around;
-  background: #00ff00; /* verde estilo NVIDIA */
+  background: #2c2c2c;
   padding: 40px;
 }
 .contador {
+  background: #333;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   text-align: center;
-  color: #000;
+}
+.contador span {
+  font-size: 40px;
+  color: #ffa500;
+}
+.contador h3 {
+  margin: 10px 0 5px;
+}
+.contador p {
+  font-size: 28px;
+  margin: 0;
 }
 
 /* Rodapé */
 footer {
-  background: #000;
+  background: #2c2c2c;
   color: #fff;
   text-align: center;
   padding: 20px;
 }
+footer .social {
+  margin-top: 10px;
+}
 footer .social a {
   margin: 0 10px;
-  color: #ffa500;
+  color: #fff;
   text-decoration: none;
+  transition: color 0.3s;
+}
+footer .social a:hover {
+  color: #ffa500;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -196,4 +229,3 @@ footer .social a {
     align-items: center;
   }
 }
-
