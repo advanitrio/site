@@ -12,7 +12,6 @@ const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
 
 function showSlide(i) {
-  // Ajusta índice para não sair do limite
   if (i < 0) {
     index = totalSlides - 1;
   } else if (i >= totalSlides) {
@@ -20,22 +19,19 @@ function showSlide(i) {
   } else {
     index = i;
   }
-  // Move o container de slides
   slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// Botão próximo
 document.querySelector('.next').addEventListener('click', () => {
   showSlide(index + 1);
 });
 
-// Botão anterior
 document.querySelector('.prev').addEventListener('click', () => {
   showSlide(index - 1);
 });
 
-// ===== AUTO-PLAY (opcional) =====
-// Se quiser que o carrossel troque sozinho a cada 5 segundos:
+// Auto-play (opcional)
 setInterval(() => {
   showSlide(index + 1);
 }, 5000);
+
