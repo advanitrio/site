@@ -1,1 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif; /* Fonte tecnológica */
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c2c2c; /* cinza tecnológico */
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #ffa500; /* laranja hover */
+}
+.menu li a.active {
+  color: #ff6600; /* laranja forte ativo */
+}
+
+/* Hambúrguer */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  opacity: 0.8;
+}
+.slide .texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px #000;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Serviços */
+.servicos {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: #fff;
+}
+.card {
+  width: 30%;
+  background: #eee;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Foco */
+.foco {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+.foco .item {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Pergunta */
+.porque {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Contadores */
+.contadores {
+  display: flex;
+  justify-content: space-around;
+  background: #00ff00; /* verde estilo NVIDIA */
+  padding: 40px;
+}
+.contador {
+  text-align: center;
+  color: #000;
+}
+
+/* Rodapé */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+footer .social a {
+  margin: 0 10px;
+  color: #ffa500;
+  text-decoration: none;
 
