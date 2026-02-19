@@ -45,8 +45,9 @@ header {
 /* Hambúrguer */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
+  color: #fff;
 }
 
 /* Carrossel */
@@ -64,7 +65,14 @@ header {
 }
 .slide img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.9; /* leve esmaecimento */
+}
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* overlay escuro translúcido */
 }
 .slide .texto {
   position: absolute;
@@ -74,6 +82,7 @@ header {
   color: #fff;
   font-size: 24px;
   text-shadow: 2px 2px 4px #000;
+  z-index: 1;
 }
 .prev, .next {
   position: absolute;
@@ -84,6 +93,7 @@ header {
   border: none;
   padding: 10px;
   cursor: pointer;
+  z-index: 2;
 }
 .prev { left: 10px; }
 .next { right: 10px; }
@@ -142,4 +152,48 @@ footer .social a {
   margin: 0 10px;
   color: #ffa500;
   text-decoration: none;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  /* Menu vira hambúrguer */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #2c2c2c;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  /* Serviços em coluna */
+  .servicos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* Ícones em coluna */
+  .foco {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contadores em coluna */
+  .contadores {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
