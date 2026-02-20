@@ -2,111 +2,119 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Advan IT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2:wght@400&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADVAN IT - Soluções em T.I</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
     <div class="logo">
-      <h1>Advan IT</h1>
+      <h1>ADVAN IT</h1>
       <p>Soluções em T.I</p>
     </div>
     <nav>
-      <ul class="menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#quem-somos">Quem Somos?</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#contato">Contato</a></li>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Quem somos?</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
-      <div class="hamburger">&#9776;</div>
     </nav>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
-  <!-- Carrossel -->
-  <section id="home" class="carousel">
-    <div class="slides">
-      <div class="slide">
-        <img src="tidata1.jpg" alt="Imagem 1">
-        <div class="texto">Inovação em cada solução</div>
+  <!-- Conteúdo Home -->
+  <main>
+    <section class="intro">
+      <div class="box">
+        <img src="img/advan.jpg" alt="ADVAN IT">
+        <div class="text">
+          <h2>Porque a ADVAN IT?</h2>
+          <p>A ADVAN IT oferece soluções inovadoras em tecnologia da informação, com foco em qualidade, segurança e resultados. Nossa equipe especializada garante que cada projeto seja entregue com excelência, ajudando empresas a crescerem de forma sustentável e competitiva.</p>
+        </div>
       </div>
-      <div class="slide">
-        <img src="tidata.jpg" alt="Imagem 2">
-        <div class="texto">Tecnologia para impulsionar negócios</div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Conquistas -->
+    <section class="conquistas">
+      <h2>Algumas de Nossas Conquistas</h2>
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-desktop"></i>
+          <h3>211</h3>
+          <p>PROJETOS</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-user"></i>
+          <h3>1.476</h3>
+          <p>CLIENTES NACIONAIS</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-globe"></i>
+          <h3>5</h3>
+          <p>CLIENTES INTERNACIONAIS</p>
+        </div>
       </div>
-      <div class="slide">
-        <img src="tidata3.jpg" alt="Imagem 3">
-        <div class="texto">Conectando você ao futuro</div>
+    </section>
+
+    <!-- Notícias -->
+    <section class="noticias">
+      <div class="item">
+        <img src="img/ia.jpg" alt="Inteligência Artificial">
+        <h3>Inteligência Artificial</h3>
+        <p>Exploramos o poder da IA para transformar negócios e otimizar processos.</p>
+        <button>Ler mais</button>
       </div>
-    </div>
-    <button class="prev">◀</button>
-    <button class="next">▶</button>
-  </section>
+      <div class="item">
+        <img src="img/suporte.jpg" alt="Suporte TI">
+        <h3>Suporte de T.I</h3>
+        <p>Suporte técnico especializado para manter sua infraestrutura sempre ativa.</p>
+        <button>Ler mais</button>
+      </div>
+      <div class="item">
+        <img src="img/software.jpg" alt="Desenvolvimento de Software">
+        <h3>Desenvolvimento de Softwares</h3>
+        <p>Construímos soluções sob medida para atender às necessidades do seu negócio.</p>
+        <button>Ler mais</button>
+      </div>
+      <div class="item">
+        <img src="img/marketing.jpg" alt="Marketing Digital">
+        <h3>Marketing Digital</h3>
+        <p>Estratégias digitais para aumentar sua visibilidade e conquistar novos clientes.</p>
+        <button>Ler mais</button>
+      </div>
+    </section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="servicos">
-    <div class="card">
-      <h3>Consultoria</h3>
-      <p>Orientação estratégica para empresas que querem crescer com tecnologia.</p>
-    </div>
-    <div class="card">
-      <h3>Desenvolvimento</h3>
-      <p>Sites e sistemas sob medida para o seu negócio.</p>
-    </div>
-    <div class="card">
-      <h3>Suporte</h3>
-      <p>Equipe especializada para manter sua operação sempre ativa.</p>
-    </div>
-  </section>
-
-  <!-- Foco -->
-  <section class="foco">
-    <div class="item"><span>⚙️</span><p>Suporte</p></div>
-    <div class="item"><span>&lt;/&gt;</span><p>Desenvolvimento</p></div>
-    <div class="item"><span>🛡️</span><p>Segurança</p></div>
-    <div class="item"><span>🌐</span><p>Marketing</p></div>
-  </section>
-
-  <!-- Pergunta -->
-  <section class="porque">
-    <h2>Por que escolher a ADVAN IT?</h2>
-    <p>Porque unimos inovação, segurança e performance para transformar desafios em oportunidades. 
-       Nossa equipe é apaixonada por tecnologia e comprometida em entregar resultados reais para o seu negócio.</p>
-  </section>
-
-  <!-- Contadores -->
-  <section class="contadores">
-    <div class="contador">
-      <span>👤</span>
-      <h3>Clientes BR</h3>
-      <p>1.425</p>
-    </div>
-    <div class="contador">
-      <span>💻</span>
-      <h3>Projetos</h3>
-      <p>188</p>
-    </div>
-    <div class="contador">
-      <span>🌍</span>
-      <h3>Clientes Internacionais</h3>
-      <p>4</p>
-    </div>
-  </section>
+    <!-- Especialidades -->
+    <section class="especialidades">
+      <h2>SOMOS ESPECIALISTAS EM DIVERSAS OUTRAS ÁREAS DE TECNOLOGIA DA INFORMAÇÃO:</h2>
+      <div class="icons">
+        <div><i class="fas fa-shield-alt"></i><p>Segurança da Informação</p></div>
+        <div><i class="fas fa-microchip"></i><p>Hardware</p></div>
+        <div><i class="fas fa-network-wired"></i><p>Redes</p></div>
+        <div><i class="fas fa-server"></i><p>Servidores</p></div>
+      </div>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer>
-    <p>© 2021 Designed by ADVAN IT Solutions</p>
     <div class="social">
-      <a href="#">📷 Instagram</a>
-      <a href="#">📘 Facebook</a>
-      <a href="#">🌐 Google</a>
-      <a href="mailto:advanitrio@gmail.com">✉️ advanitrio@gmail.com</a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
     </div>
+    <p>© 2021 powered by ADVAN IT - Soluções em T.I / Brasil</p>
   </footer>
 </body>
 </html>
+
 
 
