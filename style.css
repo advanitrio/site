@@ -82,16 +82,22 @@ nav ul li.active a {
   display: flex;
   border: 1px solid #000;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 700px; /* reduz largura da moldura */
   padding: 20px;
   border-radius: 8px;
   background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* sombra suave */
 }
 
 .intro img {
-  width: 160px;
+  width: 240px; /* aumenta tamanho da imagem */
   margin-right: 20px;
   border-radius: 6px;
+  flex-shrink: 0; /* impede compressão da imagem */
+}
+
+.intro .text {
+  flex: 1; /* texto ocupa o restante */
 }
 
 .intro .text h2 {
@@ -246,14 +252,25 @@ footer .social a:hover {
   .hamburger {
     display: block; /* mostra hamburguer apenas no mobile */
   }
+
   .intro .box {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 95%; /* ocupa quase toda a tela */
   }
+
   .intro img {
+    width: 100%; /* imagem ocupa toda a largura */
+    max-width: 350px; /* limite para não ficar exagerado */
     margin: 0 0 20px;
+    border-radius: 8px;
   }
+
+  .intro .text {
+    width: 100%;
+  }
+
   .cards {
     gap: 30px;
   }
