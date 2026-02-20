@@ -329,7 +329,7 @@ nav ul.active li {
   object-fit: cover;       /* preenche toda a área */
   object-position: center; /* centraliza o foco da imagem */
   display: block;
-  filter: brightness(70%);
+  filter: brightness(50%);
 }
 
 .carousel .caption {
