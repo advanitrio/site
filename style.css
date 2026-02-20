@@ -392,6 +392,22 @@ nav ul.active li {
   }
 }
 
+/* Responsivo - Telas grandes (ex.: monitores 24") */
+@media (min-width: 1400px) {
+  .carousel {
+    height: 750px; /* aumenta a altura em telas muito grandes */
+  }
+
+  .carousel .caption {
+    font-size: 36px; /* texto maior para acompanhar a imagem */
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    padding: 16px;
+    font-size: 28px;
+  }
+}
 
 
 
