@@ -2,9 +2,11 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav ul');
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+}
 
 // ===== Carrossel =====
 const slides = document.querySelectorAll('.carousel .slide');
@@ -22,17 +24,24 @@ function showSlide(index) {
   });
 }
 
+// Inicializa primeiro slide
+showSlide(currentIndex);
+
 // Botão anterior
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-  showSlide(currentIndex);
-});
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+  });
+}
 
 // Botão próximo
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-  showSlide(currentIndex);
-});
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
+  });
+}
 
 // ===== Troca automática de slides =====
 setInterval(() => {
