@@ -374,21 +374,56 @@ nav ul.active li {
   right: 20px;
 }
 
-/* Responsivo - Mobile */
-@media (max-width: 768px) {
+/* Responsivo - Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
   .carousel {
-    height: 300px; /* altura menor para caber bem no celular */
+    height: 280px; /* altura menor para celulares compactos */
   }
 
   .carousel .caption {
-    font-size: 20px; /* texto proporcional */
-    padding: 0 10px;
+    font-size: 18px;
+    padding: 0 8px;
   }
 
   .carousel .prev,
   .carousel .next {
-    padding: 10px;
-    font-size: 20px;
+    padding: 8px;
+    font-size: 18px;
+  }
+}
+
+/* Responsivo - Smartphones médios/grandes (481px até 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel {
+    height: 380px; /* altura maior para celulares grandes */
+  }
+
+  .carousel .caption {
+    font-size: 22px;
+    padding: 0 12px;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    padding: 12px;
+    font-size: 22px;
+  }
+}
+
+/* Responsivo - Tablets (769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel {
+    height: 500px; /* altura intermediária para tablets */
+  }
+
+  .carousel .caption {
+    font-size: 28px;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    padding: 14px;
+    font-size: 24px;
   }
 }
 
