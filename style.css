@@ -287,6 +287,7 @@ nav ul.active {
   width: 220px;
   padding: 20px;
   border-radius: 0 0 8px 8px;
+  z-index: 9999; /* garante que fique acima do carrossel */
 }
 
 nav ul.active li {
@@ -300,6 +301,7 @@ nav ul.active li {
   height: 600px; /* altura maior para desktop */
   overflow: hidden;
   background: #000;
+  z-index: 1; /* carrossel fica abaixo do menu */
 }
 
 .carousel .slides {
@@ -356,7 +358,7 @@ nav ul.active li {
   font-size: 26px;
   border-radius: 50%;
   transition: background 0.3s;
-  z-index: 2;
+  z-index: 2; /* acima das imagens, mas abaixo do menu */
 }
 
 .carousel .prev:hover,
@@ -389,6 +391,7 @@ nav ul.active li {
     font-size: 20px;
   }
 }
+
 
 
 
