@@ -20,6 +20,7 @@ header {
   background: #333;
   padding: 15px 30px;
   color: white;
+  position: relative;
 }
 
 .logo h1 {
@@ -248,5 +249,19 @@ footer .social a:hover {
   }
 }
 
+/* Menu mobile ativo */
+nav ul.active {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  position: absolute;
+  top: 60px; /* abaixo do cabeçalho */
+  right: 0;
+  width: 220px;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+}
 
-
+nav ul.active li {
+  margin: 10px 0;
+}
