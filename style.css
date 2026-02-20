@@ -24,7 +24,7 @@ header {
 .logo p {
   margin: 0;
   font-size: 14px;
-  color: #ffa500;
+  color: #fff; /* corrigido para branco */
 }
 
 .menu {
@@ -69,7 +69,7 @@ header {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* cobre sem cortar texto */
   opacity: 0.9;
 }
 .slide::after {
@@ -81,9 +81,9 @@ header {
 }
 .slide .texto {
   position: absolute;
-  top: 50%;
+  bottom: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   color: #fff;
   font-size: 28px;
   text-shadow: 2px 2px 4px #000;
@@ -128,6 +128,7 @@ header {
   display: flex;
   justify-content: space-around;
   padding: 40px;
+  background: #f4f4f4; /* separa visualmente */
 }
 .foco .item {
   text-align: center;
@@ -138,6 +139,7 @@ header {
 .porque {
   padding: 40px;
   text-align: center;
+  background: #fff; /* separa visualmente */
 }
 
 /* Contadores */
@@ -169,10 +171,11 @@ header {
 
 /* Rodapé */
 footer {
-  background: #2c2c2c;
+  background: #000; /* voltou a ser preto */
   color: #fff;
   text-align: center;
   padding: 20px;
+  margin-top: 40px; /* separa do conteúdo acima */
 }
 footer .social {
   margin-top: 10px;
