@@ -25,22 +25,12 @@ header {
 
 .logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1.2; /* reduz espaço vertical */
+  align-items: center;
 }
 
-.logo h1 {
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.logo p {
-  margin: 0;
-  font-size: 13px;
-  color: #ddd;
-  font-style: italic;
+.logo img {
+  height: 60px;
+  width: auto;
 }
 
 nav ul {
