@@ -1,4 +1,5 @@
 /* ================= RESET ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
 body {
   background: #0f172a;
   color: #fff;
+  padding-top: 80px; /* 👈 CORREÇÃO IMPORTANTE: evita header “comendo” o hero */
 }
 
 /* ================= HEADER BASE ================= */
@@ -33,17 +35,16 @@ header {
   isolation: isolate;
 }
 
-/* ================= CAMADA GLASS (CONSISTENTE ENTRE BROWSERS) ================= */
+/* ================= GLASS ================= */
 
 header::before {
   content: "";
   position: absolute;
   inset: 0;
 
-  /* glass controlado (sem depender de blur do navegador) */
   background: linear-gradient(
     to bottom,
-    rgba(11, 18, 32, 0.30),
+    rgba(11, 18, 32, 0.32),
     rgba(11, 18, 32, 0.18)
   );
 
@@ -52,40 +53,35 @@ header::before {
   z-index: -1;
 }
 
-/* ================= TEXTURA (NOISE PREMIUM) ================= */
+/* ================= NOISE (SUAVE) ================= */
 
 header::after {
   content: "";
   position: absolute;
   inset: 0;
-
   pointer-events: none;
 
-  /* noise sutil para efeito vidro realista */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 
-  opacity: 0.04;
-
+  opacity: 0.035;
   mix-blend-mode: overlay;
 
   z-index: -1;
 }
 
-/* ================= ESTADO SCROLLED ================= */
+/* ================= SCROLLED ================= */
 
 header.scrolled::before {
   background: linear-gradient(
     to bottom,
-    rgba(11, 18, 32, 0.85),
-    rgba(11, 18, 32, 0.75)
+    rgba(11, 18, 32, 0.88),
+    rgba(11, 18, 32, 0.78)
   );
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.30);
 }
 
-header.scrolled::after {
-  opacity: 0.06;
-}
-
-/* ================= MELHORIA DE PERFORMANCE ================= */
+/* ================= PERFORMANCE ================= */
 
 header,
 header::before,
@@ -93,14 +89,21 @@ header::after {
   will-change: transform;
 }
 
-/* ================= LOGO ================= */
+/* ================= LOGO (CORREÇÃO PRINCIPAL) ================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
-  height: 45px;
+  height: 56px; /* 👈 AUMENTO REAL (45 → 56) */
   width: auto;
   display: block;
 }
 
 /* ================= MENU ================= */
+
 nav ul {
   display: flex;
   list-style: none;
@@ -120,7 +123,6 @@ nav a:hover {
   color: #22c55e;
 }
 
-/* underline animado estilo premium */
 nav a::after {
   content: "";
   position: absolute;
@@ -137,6 +139,7 @@ nav a:hover::after {
 }
 
 /* ================= HERO ================= */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -150,23 +153,20 @@ nav a:hover::after {
   background-position: center;
 }
 
-/* gradiente profissional (profundidade real) */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.75)
   );
+
   z-index: 1;
 }
 
-/* conteúdo */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -190,6 +190,7 @@ nav a:hover::after {
 }
 
 /* ================= BUTTONS ================= */
+
 .buttons {
   margin-top: 25px;
 }
@@ -214,6 +215,7 @@ nav a:hover::after {
 }
 
 /* ================= SECTIONS ================= */
+
 .section {
   padding: 60px 20px;
   text-align: center;
@@ -228,6 +230,7 @@ nav a:hover::after {
 }
 
 /* GRID */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -243,6 +246,7 @@ nav a:hover::after {
 }
 
 /* CTA */
+
 .cta {
   padding: 60px 20px;
   text-align: center;
@@ -250,6 +254,7 @@ nav a:hover::after {
 }
 
 /* ALERT */
+
 .alert {
   background: #ef4444;
   padding: 30px;
@@ -257,6 +262,7 @@ nav a:hover::after {
 }
 
 /* FOOTER */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -264,6 +270,7 @@ footer {
 }
 
 /* WHATSAPP */
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -277,6 +284,7 @@ footer {
 }
 
 /* ANIMAÇÃO */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
