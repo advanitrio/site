@@ -28,21 +28,20 @@ header {
 
   padding: 0 30px;
 
-  /* 🔥 ESTADO INICIAL FORÇADO */
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
+  /* 🔥 ESTADO INICIAL PROFISSIONAL (não transparente total) */
+  background: rgba(11, 18, 32, 0.35);
+  backdrop-filter: blur(6px);
 
   z-index: 1000;
 
   transition: all 0.3s ease;
 }
 
-/* 🔵 depois do scroll */
+/* 🔵 ao rolar (mais forte, igual concorrente) */
 header.scrolled {
   background: rgba(11, 18, 32, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
 /* LOGO */
