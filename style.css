@@ -26,7 +26,7 @@ header {
   padding: 0 30px;
 
   /* 🔥 glass padrão (nível concorrente) */
-  background: rgba(11, 18, 32, 0.35);
+  background: rgba(11, 18, 32, 0.25);
   backdrop-filter: blur(10px);
 
   z-index: 1000;
