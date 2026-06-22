@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -27,14 +28,21 @@ header {
 
   padding: 0 30px;
 
-  background: transparent;
+  /* 🔥 transparente no topo */
+  background: rgba(0, 0, 0, 0);
+
   z-index: 1000;
 
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: 
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
 }
 
+/* 🔵 estado ao rolar */
 header.scrolled {
-  background: #0b1220;
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
@@ -78,6 +86,7 @@ nav a:hover {
   background-position: center;
 }
 
+/* overlay escuro */
 .hero-overlay {
   position: absolute;
   width: 100%;
@@ -87,6 +96,7 @@ nav a:hover {
   left: 0;
 }
 
+/* conteúdo hero */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -133,13 +143,6 @@ nav a:hover {
   color: #fff;
 }
 
-/* ================= ALERT ================= */
-.alert {
-  background: #ef4444;
-  padding: 30px;
-  text-align: center;
-}
-
 /* ================= SECTIONS ================= */
 .section {
   padding: 60px 20px;
@@ -174,6 +177,13 @@ nav a:hover {
   padding: 60px 20px;
   text-align: center;
   background: #0b1220;
+}
+
+/* ALERT */
+.alert {
+  background: #ef4444;
+  padding: 30px;
+  text-align: center;
 }
 
 /* FOOTER */
