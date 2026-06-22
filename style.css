@@ -1,440 +1,144 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #333;
-  line-height: 1.6;
+  background: #0f172a;
+  color: #fff;
 }
 
-/* Cabeçalho */
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: #333;
   padding: 15px 30px;
-  color: white;
-  position: relative;
-  height: 70px; /* altura fixa do cabeçalho */
-}
-
-.logo {
-  display: flex;
+  background: #0b1220;
   align-items: center;
 }
 
 .logo img {
-  height: 160px;
-  width: auto;
+  height: 60px;
 }
 
 nav ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
-  display: flex;
-  gap: 25px;
 }
 
-nav ul li a {
+nav a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  padding: 8px 12px;
-  transition: background 0.3s;
 }
 
-nav ul li a:hover {
-  background: #4da6ff;
-  border-radius: 5px;
-}
-
-nav ul li.active a {
-  background: #0066cc;
-  border-radius: 5px;
-}
-
-/* Ícone hamburguer: escondido por padrão */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Intro */
-.intro {
-  padding: 60px 20px;
-}
-
-.intro .box {
-  display: flex;
-  border: 1px solid #000;
-  margin: 0 auto;
-  max-width: 700px; /* reduz largura da moldura */
-  padding: 20px;
-  border-radius: 8px;
-  background: #fafafa;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* sombra suave */
-}
-
-.intro img {
-  width: 240px; /* aumenta tamanho da imagem */
-  margin-right: 20px;
-  border-radius: 6px;
-  flex-shrink: 0; /* impede compressão da imagem */
-}
-
-.intro .text {
-  flex: 1; /* texto ocupa o restante */
-}
-
-.intro .text h2 {
-  margin-top: 0;
-  color: #003366;
-}
-
-/* Divisor */
-.divider {
-  border: none;
-  height: 3px;
-  background: #4da6ff;
-  margin: 60px auto;
-  width: 80%;
-  border-radius: 2px;
-}
-
-/* Conquistas */
-.conquistas {
+/* HERO */
+.hero {
+  padding: 80px 20px;
   text-align: center;
+  background: linear-gradient(135deg, #0b1220, #111c33);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+.sub {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
+
+.primary {
+  background: #22c55e;
+  color: #000;
+  font-weight: bold;
+}
+
+.secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* ALERT */
+.alert {
+  background: #ef4444;
+  padding: 30px;
+  text-align: center;
+}
+
+/* SECTIONS */
+.section {
   padding: 60px 20px;
+  text-align: center;
 }
 
-.conquistas h2 {
-  margin-bottom: 40px;
-  color: #003366;
+.section h2 {
+  margin-bottom: 30px;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+.dark {
+  background: #111827;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .card {
-  text-align: center;
+  background: #1f2937;
   padding: 20px;
+  border-radius: 10px;
 }
 
-.card i {
-  font-size: 50px;
-  color: #000;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  font-size: 28px;
-  margin: 10px 0;
-  color: #0066cc;
-}
-
-/* Notícias */
-.noticias {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin: 0 auto;
-  max-width: 1100px;
+/* CTA */
+.cta {
   padding: 60px 20px;
-}
-
-.noticias .item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.noticias img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.noticias h3 {
-  margin: 15px 0 10px;
-  color: #003366;
-}
-
-.noticias button {
-  background: #cc0000;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s;
-}
-
-.noticias button:hover {
-  background: #990000;
-}
-
-/* Especialidades */
-.especialidades {
   text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  background: #0b1220;
 }
 
-.especialidades h2 {
-  color: #003366;
-  text-decoration: underline;
-  margin-bottom: 40px;
-}
-
-.icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 40px;
-}
-
-.icons div {
-  text-align: center;
-}
-
-.icons i {
-  font-size: 45px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-/* Rodapé */
+/* FOOTER */
 footer {
-  background: #000;
-  color: #fff;
   text-align: center;
-  padding: 30px 20px;
-}
-
-footer .social a {
-  color: white;
-  margin: 0 12px;
-  font-size: 22px;
-  transition: color 0.3s;
-}
-
-footer .social a:hover {
-  color: #4da6ff;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* esconde menu tradicional */
-  }
-  .hamburger {
-    display: block; /* mostra hamburguer apenas no mobile */
-  }
-
-  .intro .box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 95%; /* ocupa quase toda a tela */
-  }
-
-  .intro img {
-    width: 100%; /* imagem ocupa toda a largura */
-    max-width: 350px; /* limite para não ficar exagerado */
-    margin: 0 0 20px;
-    border-radius: 8px;
-  }
-
-  .intro .text {
-    width: 100%;
-  }
-
-  .cards {
-    gap: 30px;
-  }
-}
-
-/* Menu mobile ativo */
-nav ul.active {
-  display: flex;
-  flex-direction: column;
-  background: #333;
-  position: absolute;
-  top: 60px; /* abaixo do cabeçalho */
-  right: 0;
-  width: 220px;
   padding: 20px;
-  border-radius: 0 0 8px 8px;
-  z-index: 9999; /* garante que fique acima do carrossel */
-}
-
-nav ul.active li {
-  margin: 10px 0;
-}
-
-/* Carrossel - Desktop */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 600px; /* altura maior para desktop */
-  overflow: hidden;
   background: #000;
-  z-index: 1; /* carrossel fica abaixo do menu */
 }
 
-.carousel .slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.carousel .slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* preenche toda a área */
-  object-position: center; /* centraliza o foco da imagem */
-  display: block;
-  filter: brightness(25%);
-}
-
-.carousel .caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-}
-
-/* Botões direcionais */
-.carousel .prev,
-.carousel .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #ff6600;
-  border: none;
-  padding: 14px;
-  cursor: pointer;
-  font-size: 26px;
-  border-radius: 50%;
-  transition: background 0.3s;
-  z-index: 2; /* acima das imagens, mas abaixo do menu */
-}
-
-.carousel .prev:hover,
-.carousel .next:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-.carousel .prev {
-  left: 20px;
-}
-
-.carousel .next {
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
   right: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 999;
 }
-
-/* Responsivo - Mobile pequeno (até 480px) */
-@media (max-width: 480px) {
-  .carousel {
-    height: 280px; /* altura menor para celulares compactos */
-  }
-
-  .carousel .caption {
-    font-size: 18px;
-    padding: 0 8px;
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    padding: 8px;
-    font-size: 18px;
-  }
-}
-
-/* Responsivo - Smartphones médios/grandes (481px até 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .carousel {
-    height: 380px; /* altura maior para celulares grandes */
-  }
-
-  .carousel .caption {
-    font-size: 22px;
-    padding: 0 12px;
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    padding: 12px;
-    font-size: 22px;
-  }
-}
-
-/* Responsivo - Tablets (769px até 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .carousel {
-    height: 500px; /* altura intermediária para tablets */
-  }
-
-  .carousel .caption {
-    font-size: 28px;
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    padding: 14px;
-    font-size: 24px;
-  }
-}
-
-/* Responsivo - Telas grandes (ex.: monitores 24") */
-@media (min-width: 1400px) {
-  .carousel {
-    height: 750px; /* aumenta a altura em telas muito grandes */
-  }
-
-  .carousel .caption {
-    font-size: 36px; /* texto maior para acompanhar a imagem */
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    padding: 16px;
-    font-size: 28px;
-  }
-}
-
-
-
-
