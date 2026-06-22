@@ -12,26 +12,25 @@ body {
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: #0b1220;
   align-items: center;
+
+  padding: 15px 30px;
+
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo img {
-  height: 60px;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
+header.scrolled {
+  background: #0b1220;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* HERO */
@@ -42,6 +41,7 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 80px;
 
   background-image: url("tidata.jpg");
   background-size: cover;
