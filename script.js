@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
 
-  let lastState = false;
+  const updateHeader = () => {
+    const scrolled = window.scrollY > 30;
+    header.classList.toggle("scrolled", scrolled);
+  };
 
-  function updateHeader() {
-    const shouldBeScrolled = window.scrollY > 30; // 👈 mais estável que 10px
+  let ticking = false;
 
-    if (shouldBeScrolled !== lastState) {
-      header.classList.toggle("scrolled", shouldBeScrolled);
-      lastState = shouldBeScrolled;
-    }
-  }
-
-  // estado inicial
-  updateHeader();
-
-  // scroll otimizado
   window.addEventListener("scroll", () => {
-    requestAnimationFrame(updateHeader);
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateHeader();
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
+
+  updateHeader();
 });
