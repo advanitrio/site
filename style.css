@@ -29,50 +29,19 @@ header {
   padding: 0 40px;
 
   z-index: 1000;
-  background: transparent;
 
-  isolation: isolate;
+  background: rgba(11, 18, 32, 0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* glass consistente (sem depender de blur do browser) */
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(11, 18, 32, 0.30),
-    rgba(11, 18, 32, 0.18)
-  );
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  z-index: -1;
-}
-
-/* textura leve (premium, sem poluir) */
-
-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-
-  opacity: 0.025;
-  mix-blend-mode: overlay;
-
-  z-index: -1;
-}
-
-/* estado scroll */
-
-header.scrolled::before {
+header.scrolled {
   background: rgba(11, 18, 32, 0.82);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.30);
 }
 
 /* ================= LOGO ================= */
@@ -83,7 +52,7 @@ header.scrolled::before {
 }
 
 .logo img {
-  height: 58px;
+  height: 54px;
   width: auto;
   display: block;
 }
@@ -101,9 +70,9 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-size: 15px;
+  opacity: 0.85;
   position: relative;
   transition: 0.3s;
-  opacity: 0.85;
 }
 
 nav a:hover {
@@ -126,7 +95,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ================= HERO (MELHOR QUE CONCORRENTE) ================= */
+/* ================= HERO ================= */
 
 .hero {
   position: relative;
@@ -136,8 +105,6 @@ nav a:hover::after {
   align-items: center;
   justify-content: flex-start;
 
-  text-align: left;
-
   padding: 0 10%;
 
   background-image: url("tidata.jpg");
@@ -145,7 +112,7 @@ nav a:hover::after {
   background-position: center;
 }
 
-/* overlay profissional (profundidade real) */
+/* overlay profissional (correto e estável) */
 
 .hero::before {
   content: "";
@@ -154,22 +121,18 @@ nav a:hover::after {
 
   background: linear-gradient(
     90deg,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.88) 0%,
+    rgba(0,0,0,0.60) 50%,
     rgba(0,0,0,0.25) 100%
   );
 
   z-index: 1;
 }
 
-/* conteúdo */
-
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 650px;
-
-  animation: fadeUp 1s ease;
 }
 
 .hero h1 {
@@ -237,7 +200,7 @@ nav a:hover::after {
   background: #111827;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 
 .grid {
   display: grid;
@@ -247,13 +210,14 @@ nav a:hover::after {
   margin: auto;
 }
 
-/* CARDS (nível premium real) */
+/* ================= CARDS ================= */
 
 .card {
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.06);
   padding: 22px;
   border-radius: 12px;
+
   transition: 0.3s;
 }
 
@@ -262,7 +226,7 @@ nav a:hover::after {
   background: rgba(255,255,255,0.06);
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta {
   padding: 80px 20px;
@@ -270,7 +234,7 @@ nav a:hover::after {
   background: #0b1220;
 }
 
-/* ALERT */
+/* ================= ALERT ================= */
 
 .alert {
   background: #ef4444;
@@ -278,7 +242,7 @@ nav a:hover::after {
   text-align: center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
   text-align: center;
@@ -286,7 +250,7 @@ footer {
   background: #000;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 
 .whatsapp-float {
   position: fixed;
@@ -300,7 +264,7 @@ footer {
   z-index: 999;
 }
 
-/* ANIMAÇÃO */
+/* ================= ANIMAÇÃO ================= */
 
 @keyframes fadeUp {
   from {
