@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateHeader = () => {
     const scrolled = window.scrollY > 30;
+
+    // correto: scroll ativa estado escuro
     header.classList.toggle("scrolled", scrolled);
   };
 
