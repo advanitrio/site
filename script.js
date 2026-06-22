@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
 
-  function handleScroll() {
-    if (window.scrollY > 0) {
+  function updateHeader() {
+    if (window.scrollY > 10) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
     }
   }
 
-  window.addEventListener("scroll", handleScroll);
+  // 🔥 garante estado correto imediatamente ao carregar
+  updateHeader();
 
-  // 🔥 força estado inicial correto
-  handleScroll();
+  // scroll normal
+  window.addEventListener("scroll", updateHeader);
 });
