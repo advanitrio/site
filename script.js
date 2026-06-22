@@ -9,8 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 🔥 garante estado correto imediatamente ao carregar
-  updateHeader();
+  // 🔥 FORÇA estado LIMPO ANTES DE QUALQUER COISA VISUAL
+  header.classList.remove("scrolled");
+
+  // 🔥 espera 1 frame do navegador (resolve o flash azul)
+  requestAnimationFrame(() => {
+    updateHeader();
+  });
 
   // scroll normal
   window.addEventListener("scroll", updateHeader);
