@@ -29,13 +29,14 @@ header {
 
   z-index: 1000;
 
-  /* MAIS TRANSPARENTE NO TOPO */
-  background: rgba(10, 14, 26, 0.12);
+  /* transparência real */
+  background: rgba(10, 14, 26, 0.06);
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* blur bem mais leve */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
 
   transition:
     background 0.3s ease,
