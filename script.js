@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
 
   function updateHeader() {
@@ -9,14 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 🔥 FORÇA estado LIMPO ANTES DE QUALQUER COISA VISUAL
+  // estado inicial garantido
   header.classList.remove("scrolled");
+  updateHeader();
 
-  // 🔥 espera 1 frame do navegador (resolve o flash azul)
-  requestAnimationFrame(() => {
-    updateHeader();
-  });
-
-  // scroll normal
   window.addEventListener("scroll", updateHeader);
 });
