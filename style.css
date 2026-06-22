@@ -55,11 +55,15 @@ header.scrolled {
   height: 88px;
   width: auto;
   display: block;
+  
   transition: transform 0.25s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .logo:hover img {
-  transform: scale(1.06);
+  transform: scale(1.06) translateZ(0);
 }
 
 /* ================= NAV ================= */
