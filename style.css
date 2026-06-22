@@ -28,18 +28,17 @@ header {
 
   padding: 0 30px;
 
-  /* 🔥 transparente no topo */
-  background: rgba(0, 0, 0, 0);
+  /* 🔥 FORÇA transparência REAL no início */
+  background: transparent !important;
+  box-shadow: none;
+  backdrop-filter: none;
 
   z-index: 1000;
 
-  transition: 
-    background 0.3s ease,
-    box-shadow 0.3s ease,
-    backdrop-filter 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* 🔵 estado ao rolar */
+/* estado após scroll */
 header.scrolled {
   background: rgba(11, 18, 32, 0.85);
   backdrop-filter: blur(10px);
