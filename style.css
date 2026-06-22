@@ -11,7 +11,7 @@ body {
   color: #fff;
 }
 
-/* ================= HEADER (GLASS PREMIUM UNIFICADO) ================= */
+/* ================= HEADER BASE ================= */
 
 header {
   position: fixed;
@@ -26,23 +26,41 @@ header {
 
   padding: 0 30px;
 
-  /* Glass consistente entre navegadores */
-  background: rgba(11, 18, 32, 0.22);
+  background: transparent;
+
+  z-index: 1000;
+
+  /* cria contexto isolado para evitar bugs de renderização entre browsers */
+  isolation: isolate;
+}
+
+/* ================= CAMADA DE GLASS ================= */
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* vidro base */
+  background: rgba(11, 18, 32, 0.20);
+
+  /* blur consistente cross-browser */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 
-  /* melhora performance e consistência GPU */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: background, backdrop-filter;
+  /* leve separação visual (melhora definição do header) */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
-  z-index: 1000;
+  z-index: -1;
+
   transition: all 0.35s ease;
 }
 
-/* estado ao rolar */
-header.scrolled {
+/* ================= ESTADO AO ROLAR ================= */
+
+header.scrolled::before {
   background: rgba(11, 18, 32, 0.78);
+
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
