@@ -13,7 +13,7 @@ body {
   padding-top: 80px;
 }
 
-/* ================= HEADER (V2 PREMIUM MINIMAL) ================= */
+/* ================= HEADER (mais “premium real”, menos genérico) ================= */
 
 header {
   position: fixed;
@@ -26,27 +26,28 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 48px;
+  padding: 0 52px;
 
   z-index: 1000;
 
-  background: rgba(10, 15, 28, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(10, 14, 26, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   border-bottom: 1px solid rgba(255,255,255,0.06);
 
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 header.scrolled {
-  background: rgba(10, 15, 28, 0.85);
+  background: rgba(10, 14, 26, 0.88);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
 /* ================= LOGO ================= */
 
 .logo img {
-  height: 56px;
+  height: 58px;
   width: auto;
   display: block;
 }
@@ -56,30 +57,30 @@ header.scrolled {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 28px;
+  gap: 26px;
   align-items: center;
 }
 
 nav a {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.78);
   text-decoration: none;
   font-size: 15px;
-  transition: 0.2s ease;
   position: relative;
+  transition: 0.2s ease;
 }
 
 nav a:hover {
   color: #22c55e;
 }
 
-/* underline premium */
+/* underline mais fino e elegante */
 nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -7px;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background: #22c55e;
   transition: 0.25s ease;
 }
@@ -88,7 +89,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ================= HERO (DIFERENCIAL REAL DO V2) ================= */
+/* ================= HERO (DIFERENCIAL REAL AGORA) ================= */
 
 .hero {
   position: relative;
@@ -97,65 +98,67 @@ nav a:hover::after {
   display: flex;
   align-items: center;
 
-  padding: 0 10%;
+  padding: 0 9%;
 
   background-image: url("tidata.jpg");
   background-size: cover;
   background-position: center;
 }
 
-/* overlay forte e elegante (padrão SaaS) */
+/* contraste mais “cinematográfico” (isso muda MUITO percepção) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(
-    circle at 30% 50%,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.85)
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.92) 0%,
+    rgba(0,0,0,0.65) 45%,
+    rgba(0,0,0,0.25) 100%
   );
 
   z-index: 1;
 }
 
-/* conteúdo */
 .hero-content {
   position: relative;
   z-index: 2;
 
-  max-width: 680px;
+  max-width: 720px;
 }
 
+/* tipografia mais forte (isso é o que concorrente usa melhor) */
 .hero h1 {
-  font-size: 56px;
-  line-height: 1.05;
-  letter-spacing: -0.5px;
+  font-size: 58px;
+  line-height: 1.02;
+  letter-spacing: -1px;
   margin-bottom: 18px;
 }
 
 .hero p {
   font-size: 18px;
-  color: rgba(255,255,255,0.80);
+  color: rgba(255,255,255,0.82);
 }
 
 .sub {
-  margin-top: 12px;
-  color: rgba(255,255,255,0.65);
+  margin-top: 14px;
+  color: rgba(255,255,255,0.62);
+  font-size: 16px;
 }
 
-/* ================= BUTTONS (CONVERSÃO FORTE) ================= */
+/* ================= BUTTONS ================= */
 
 .buttons {
-  margin-top: 28px;
+  margin-top: 30px;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 18px;
-  border-radius: 8px;
+  padding: 13px 20px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.2s ease;
@@ -167,11 +170,11 @@ nav a:hover::after {
 }
 
 .primary:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .secondary {
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.35);
   color: #fff;
 }
 
@@ -180,16 +183,16 @@ nav a:hover::after {
   color: #22c55e;
 }
 
-/* ================= SECTIONS (MAIS ESPAÇO = MAIS PREMIUM) ================= */
+/* ================= SECTIONS ================= */
 
 .section {
-  padding: 100px 20px;
+  padding: 110px 20px;
   text-align: center;
 }
 
 .section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 34px;
+  margin-bottom: 44px;
 }
 
 /* ================= GRID ================= */
@@ -197,34 +200,34 @@ nav a:hover::after {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 22px;
 
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
 }
 
-/* ================= CARDS (NÍVEL SAAS REAL) ================= */
+/* ================= CARDS (mais “tech SaaS real”) ================= */
 
 .card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
+  border-radius: 16px;
 
-  padding: 26px;
+  padding: 28px;
 
   transition: 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-7px);
   background: rgba(255,255,255,0.06);
-  border-color: rgba(34,197,94,0.4);
+  border-color: rgba(34,197,94,0.45);
 }
 
 /* ================= CTA ================= */
 
 .cta {
-  padding: 100px 20px;
+  padding: 110px 20px;
   text-align: center;
   background: #0a0f1c;
 }
@@ -233,7 +236,7 @@ nav a:hover::after {
 
 .alert {
   background: #ef4444;
-  padding: 28px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -241,17 +244,17 @@ nav a:hover::after {
 
 footer {
   text-align: center;
-  padding: 24px;
+  padding: 26px;
   background: #05070d;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
 }
 
 /* ================= WHATSAPP ================= */
 
 .whatsapp-float {
   position: fixed;
-  bottom: 22px;
-  right: 22px;
+  bottom: 24px;
+  right: 24px;
 
   background: #25d366;
   color: white;
