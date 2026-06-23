@@ -344,18 +344,67 @@ footer {
   margin-top: 8px;
 }
 
-/* RESPONSIVO (mobile) */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-  nav {
-    display: none;
+
+  header {
+    padding: 0 18px;
   }
 
-  nav.open {
-    display: flex;
+  .logo img {
+    height: 58px;
   }
 
   .menu-toggle {
     display: flex;
+  }
+
+  nav {
+    display: none;
+
+    position: fixed;
+    top: 64px;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(10,14,26,0.98);
+
+    padding: 24px;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 90px 24px 40px;
+    background-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.05;
+  }
+
+  .hero p,
+  .sub {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
