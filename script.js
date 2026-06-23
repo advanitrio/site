@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const header = document.querySelector("header");
 
   const updateHeader = () => {
     const scrolled = window.scrollY > 30;
-
-    // correto: scroll ativa estado escuro
     header.classList.toggle("scrolled", scrolled);
   };
 
@@ -21,4 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { passive: true });
 
   updateHeader();
+
+  /* MENU MOBILE */
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  }
+
 });
