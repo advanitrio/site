@@ -35,7 +35,7 @@ header {
 
   z-index: 1000;
 
-  background: rgba(10, 14, 26, 0.18);
+  background: rgba(10, 14, 26, 0.25);
   border-bottom: 1px solid rgba(255,255,255,0.04);
 
   backdrop-filter: none; /* importante: remove “vidro genérico” */
