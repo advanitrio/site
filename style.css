@@ -412,9 +412,10 @@ footer {
     background-position: 82% center;
   }
 
-  .hero h1 {
-    font-size: 42px;
-    line-height: 1.05;
+   .hero h1 {
+    font-size: 38px;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
   }
 
   .hero p,
