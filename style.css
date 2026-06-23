@@ -343,3 +343,19 @@ footer {
   display: inline-block;
   margin-top: 8px;
 }
+
+/* RESPONSIVO (mobile) */
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
