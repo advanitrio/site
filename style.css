@@ -35,7 +35,7 @@ header {
 
   z-index: 1000;
 
-  background: rgba(10, 14, 26, 0.25);
+  background: rgba(10, 14, 26, 0.22);
   border-bottom: 1px solid rgba(255,255,255,0.04);
 
   backdrop-filter: none; /* importante: remove “vidro genérico” */
@@ -44,8 +44,8 @@ header {
 }
 
 header.scrolled {
-  background: rgba(10, 14, 26, 0.92);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  background: rgba(10, 14, 26, 0.78);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
 /* ================= LOGO ================= */
