@@ -373,8 +373,6 @@ footer {
   display: block;
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
 
   header {
@@ -391,15 +389,11 @@ footer {
 
   nav {
     display: none;
-
     position: fixed;
     top: 64px;
     left: 0;
-
     width: 100%;
-
     background: rgba(10,14,26,0.98);
-
     padding: 24px;
   }
 
@@ -415,7 +409,7 @@ footer {
 
   .hero {
     padding: 90px 24px 40px;
-    background-position: center center;
+    background-position: 82% center;
   }
 
   .hero h1 {
