@@ -7,6 +7,11 @@
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+:root {
+  --brand-blue: #3b82f6;        /* azul principal (ajusta se quiser mais fiel ao logo) */
+  --brand-blue-dark: #1d4ed8;   /* azul ativo */
+}
+
 body {
   background: #0b1220;
   color: #ffffff;
@@ -81,11 +86,52 @@ nav ul {
   align-items: center;
 }
 
+/* LINKS BASE */
 nav a {
   font-size: 14px;
   color: rgba(255,255,255,0.72);
   text-decoration: none;
-  transition: 0.2s;
+
+  position: relative;
+  padding: 6px 2px;
+
+  transition: color 0.2s ease;
+}
+
+/* HOVER = azul da marca */
+nav a:hover {
+  color: var(--brand-blue);
+}
+
+/* UNDERLINE BASE (mantido seu estilo, só alinhado ao brand) */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: var(--brand-blue);
+
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+/* hover anima underline */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE (MENU SELECIONADO) */
+nav a.active {
+  color: var(--brand-blue);
+  font-weight: 500;
+}
+
+nav a.active::after {
+  width: 100%;
+  background: var(--brand-blue-dark);
 }
 
 /* ================= HERO V3 (MAIS FORTE DE VERDADE) ================= */
